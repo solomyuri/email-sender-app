@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: email-sender-app
+  jackson:
+    serialization:
+      indent-output: true 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${ISSUER_URI:http://localhost:8087/realms/developer_business_card}
+server:
+  port: 8083
+  servlet:
+    context-path: /eapi/${spring.application.name}
+    encoding:
+      charset: UTF-8
+      
+
+#email-accounts-json-list
+email:
+  accounts: ${ACCOUNTS:[{"from":"any@gmail.com","host":"smtp.any.com","port":587,"username":"any@gmail.com","password":"anyy pass wwoo rrdd"}]}
+
+logging:
+  level:
+    "[org.eclipse.angus.mail]": DEBUG
+
