@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "email.accounts",
+      "type": "java.util.List<com.solomyuri.email_sender.model.EmailConfig>",
+      "description": "List of email configurations"
+    }
+  ]
+}
