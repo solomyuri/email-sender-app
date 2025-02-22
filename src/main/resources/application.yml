@@ -19,7 +19,16 @@ server:
 
 #email-accounts-json-list
 email:
-  accounts: ${ACCOUNTS:[{"from":"any@gmail.com","host":"smtp.any.com","port":587,"username":"any@gmail.com","password":"anyy pass wwoo rrdd"}]}
+  accounts: '${ACCOUNTS:
+    [
+      {
+        "from":"any@gmail.com",
+        "host":"smtp.any.com",
+        "port":587,
+        "username":"any@gmail.com",
+        "password":"anyy pass wwoo rrdd"
+      }
+    ]}'
 
 logging:
   level:
